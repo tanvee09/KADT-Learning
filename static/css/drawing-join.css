@@ -1,0 +1,23 @@
+.outer-container {
+    background-color: #e9e4e3;
+    width: 50rem;
+    height: 40rem;
+    margin: auto;
+    border-radius: 2px;
+    box-shadow: 5px 5px 0 0 rgba(122, 119, 119, 0.5);
+    padding: 5rem;
+}
+
+.button {
+    width: 90%;
+    height: 4rem;
+    background-color: #7386D5;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    font-size: 18px;
+}
+
+.button:hover {
+    background-color: #889ae2;
+}

@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+#drawing {
+    display: block;
+    border: solid 5px black;
+    cursor: url('http://localhost:3000/images/cursor.png'), auto;
+    z-index: -1;
+    margin: 0 auto;
+}
+
+/* button {
+    width: 4rem;
+    height: 1.5rem;
+    margin: 1rem;
+}
+
+
+button:hover {
+    cursor: pointer;
+} */
+
+
+/* button {
+    width: 10rem;
+    height: 4rem;
+} */
+
+.cursor {
+    position: absolute;
+    display: inline-block;
+    /* background: black; */
+    background-color: hsla(0,0,0,0);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    z-index: 10;
+    border: solid 2px black;
+}
+
+#buttons-container {
+    position: relative;
+    top: 0;
+    left: 0;
+}

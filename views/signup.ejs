@@ -1,0 +1,88 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand"><img src="/images/logo.png" width="200px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="margin-right: 6px;">
+                        <form class="form-inline my-2 my-lg-0" action="/" method="GET">
+                            <button class="btn btn-secondary m-2 my-sm-0" type="submit">Home</button>
+                        </form>
+                        <!-- <a class="nav-link active" aria-current="page" href="/">HOME </a> -->
+                    </li>
+                    <li class="nav-item" style="margin-right: 5px;">
+                        <form class="form-inline my-2 my-lg-0" action="/login" method="GET">
+                            <button class="btn btn-secondary m-2 my-sm-0" type="submit">Login</button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <form class="form-inline my-2 my-lg-0" action="/signup" method="GET">
+                            <button class="btn btn-secondary m-2 my-sm-0" type="submit">Signup</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="login-container" style="height: 420px;">
+        <div style="text-align: center; background-color: #4A4A4A; width: 100%; padding: 0.7rem; color: #BCF1ED; border-radius: 0.5rem 0.5rem 0 0;">
+            <h2>REGISTER</h2>
+        </div>
+        
+            <div class="container" style="margin: 3rem 0;">
+                <form action="/signup" method="POST" style="margin-bottom: 2%;">
+                    <div class="form-group">
+                        <input type="text" class="form-control first-input" aria-describedby="emailHelp" placeholder="Full Name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control second-input" aria-describedby="emailHelp" placeholder="Email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control third-input" placeholder="Password" name="password">
+                    </div>
+                    <br>
+                    <hr style="background-color: #EBEAE2;">
+                    
+                    <div class="text-center">
+                        <button type="submit" class="button">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <% if (locals.error) { %>
+                <p style="text-align: center; color: white;"><%= error%></p>
+            <% } %>
+        
+        <div style="text-align: center; background-color: #4A4A4A; width: 100%; padding: 0.7rem; color: #BCF1ED; border-radius: 0 0 0.5rem 0.5rem;">
+            <p>Already have an account? <a href="/login" style="text-decoration: underline;">Login</a></p>
+            <p></p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+

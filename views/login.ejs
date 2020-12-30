@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand"><img src="/images/logo.png" width="200px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="margin-right: 6px;">
+                        <form class="form-inline my-2 my-lg-0" action="/" method="GET">
+                            <button class="btn btn-secondary m-2 my-sm-0" type="submit">Home</button>
+                        </form>
+                    </li>
+                    <li class="nav-item" style="margin-right: 5px;">
+                        <form class="form-inline my-2 my-lg-0" action="/login" method="GET">
+                            <button class="btn btn-secondary m-2 my-sm-0" type="submit">Login</button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <form class="form-inline my-2 my-lg-0" action="/signup" method="GET">
+                            <button class="btn btn-secondary m-2 my-sm-0" type="submit">Signup</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div id="login-container">
+        <div style="text-align: center; background-color: #4A4A4A; width: 100%; padding: 0.7rem; color: #BCF1ED; border-radius: 0.5rem 0.5rem 0 0;">
+            <h2>LOGIN</h2>
+        </div>
+        <form action="/login" method="POST" style="margin-bottom: 2%;">
+        <div class="container" style="margin: 3rem 0;">
+            
+                <div class="form-group">
+                    <input type="email" class="form-control first-input" aria-describedby="emailHelp" placeholder="Email" name="email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control second-input" placeholder="Password" name="password">
+                </div>
+                <br>
+                <hr style="background-color: #EBEAE2;">
+                
+                <div class="text-center">
+                    <button type="submit" class="button">Submit</button>
+                </div>
+        </div>
+
+        <% if(locals.messages) { %>
+            <% if (messages.error) { %>
+                <p style="text-align: center; color: white;"><%= messages.error %></p>
+            <% } else if (messages.success_msg) { %>
+                <p style="text-align: center; color: white;"><%= message.error %></p>
+            <% } %>
+        <% } %>
+    
+        <% if(locals.success) { %>
+            <p style="text-align: center; color: white;"><%= success %></p>
+        <% } %>
+
+        <div style="text-align: center; background-color: #4A4A4A; width: 100%; padding: 0.7rem; color: #BCF1ED; border-radius: 0 0 0.5rem 0.5rem;">
+            <p>Don't have an account? <a href="/signup" style="text-decoration: underline;">Sign Up</a></p>
+            <p></p>
+        </div>
+        </form>
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

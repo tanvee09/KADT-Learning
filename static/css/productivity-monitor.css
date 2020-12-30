@@ -1,0 +1,25 @@
+/* body {
+    background-color: blue;
+} */
+
+#myDiv {
+    margin: auto;
+}
+
+.progress {
+    width:50%; 
+    height: 1.5rem; 
+    margin: auto;
+}
+
+#bars {
+    margin: 0;
+}
+
+.timespenttable {
+    width: 50%;
+    margin: auto;
+    font-size: 16px;
+    color: rgb(83, 81, 81);
+    font-style: italic;
+}
