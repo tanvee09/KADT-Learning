@@ -1,4 +1,9 @@
 # KADT-Learning
+## Contributors
+- <a href = "https://github.com/tanvee09">Tanvee Balhara</a>
+- <a href = "https://github.com/divyanshTyagi">Divyansh Tyagi</a>
+- <a href = "https://github.com/kopal960">Kopal Rustagi</a>
+- <a href = "https://github.com/codeanzh">Anshuman Rai</a>
 
 Inorder to use chrome extension, refer this repository for instructions <a href="https://github.com/tanvee09/productivity-monitor_chrome-extension">link</a>.
 
