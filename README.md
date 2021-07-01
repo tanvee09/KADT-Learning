@@ -16,6 +16,14 @@ To use the web app
 4. Run the server using npm test
 5. Go to this url <a href="http://localhost:3000/">link</a>.
 
+Dependencies
+-------------------
+1. Passport.js ,passport-local ,express-session and bcrypt: for authentication
+2. MongoDB and mongoose to register users and save history data, timetable data ,groups and messages.
+3. Ejs for templating
+4. Socket.io : for real time communication
+5. mailgun-js : for suggestions through email
+
 Screenshots
 -----------
 <img src="https://www.linkpicture.com/q/Screenshot-from-2021-01-10-18-56-14.png" type="image" height="300">
